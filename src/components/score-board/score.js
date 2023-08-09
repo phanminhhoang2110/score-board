@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ScoreSingle from './score-single'
+import './index.css'
 
 const ScoreDouble = ({showResult, setShowResult, setPause, pause, blueName, redName, setIsWin, resetAll}) => {
     const [red, setRed] = useState(0);
@@ -225,7 +226,7 @@ const ScoreDouble = ({showResult, setShowResult, setPause, pause, blueName, redN
                 <ScoreSingle color="#4E9CE4" score={blue} gam={blueGam} name={blueName}></ScoreSingle>
                 <ScoreSingle color="#E27E74" score={red} gam={redGam} name={redName}></ScoreSingle>
         </div>
-        <input type='text' onKeyDown={handleKeyDown} autoFocus id='score-important'/>
+        <input type='text' onKeyDown={handleKeyDown} autoFocus id='score-important' className='score-input'/>
     </div>);
 }
 
